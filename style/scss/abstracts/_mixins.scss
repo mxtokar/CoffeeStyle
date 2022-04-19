@@ -1,0 +1,12 @@
+// ≥1440px
+@mixin tablet-landscape {
+  @media (max-width: $bp-large) { @content; }
+}
+// ≥980px
+@mixin tablet {
+  @media (max-width: $bp-medium) { @content; }
+}
+// ≥750px
+@mixin phone {
+  @media (max-width: $bp-small) { @content; }
+}

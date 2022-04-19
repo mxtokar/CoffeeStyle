@@ -1,0 +1,101 @@
+.more{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__header{
+    margin-top: 10rem;
+    width: 20rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include phone{
+      margin-top: 5rem;
+    }
+  }
+
+  &__content{
+    margin-top: 10rem;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+
+
+    &_arrow{
+      display: none;
+
+      &-right{
+        position: absolute;
+        right: 10px;
+      }
+
+      &-left{
+        position: absolute;
+        left: 10px;
+      }
+
+      @include phone{
+        z-index: 9998;
+        width: 5%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    &-track{
+      width: 100%;
+      transition: .4s;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      @include phone{
+        flex-direction: row;
+        flex-wrap: nowrap;
+      }
+    }
+
+    &_item{
+      width: 32%;
+      margin-bottom: 5rem;
+
+      &_img{
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+        & img{
+          max-width: 100%;
+
+          @include phone{
+            width: 75%;
+          }
+        }
+      }
+
+      @include phone{
+        min-width: 50%;
+      }
+    }
+
+    @include tablet-landscape{
+      width: 75%;
+    }
+
+    @include tablet{
+      width: 90%;
+    }
+
+    @include phone{
+      flex-direction: row;
+      margin-top: 5rem;
+    }
+  }
+}
